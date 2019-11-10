@@ -1,0 +1,6 @@
+venv/*
+backend/venv/*
+backend/dist/*
+*.pyc
+.DS_Store
+*.db
