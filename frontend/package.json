@@ -5,7 +5,7 @@
   "author": "G40N <gaon0403@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --host 0.0.0.0 --disableHostCheck true",
     "start": "npm run dev",
     "build": "node build/build.js"
   },
@@ -50,7 +50,7 @@
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^3.3.2",
-    "webpack-dev-server": "^3.1.11",
+    "webpack-cli": "^3.3.10",
     "webpack-merge": "^4.1.0"
   },
   "engines": {

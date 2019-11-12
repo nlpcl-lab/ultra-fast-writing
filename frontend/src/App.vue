@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <router-link :to="'/'">
-      <img src="./assets/logo.png" style="margin-bottom: 12px" />
+      <img src="./assets/logo.png" style="max-width: 160px;" />
+      <h1 id="header" style="margin-bottom: 12px">UltraFastBONO</h1>
+      <br />
     </router-link>
     <div style="margin-bottom: 24px;">
       <b-button-group style="margin-bottom: 4px;">
@@ -31,6 +33,8 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -38,5 +42,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#header {
+  font-family: 'Permanent Marker', cursive !important;
+  color: #2196f3;
 }
 </style>
