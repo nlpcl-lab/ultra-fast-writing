@@ -4,7 +4,12 @@
     <b-container fluid>
       <b-row class="justify-content-center" style="margin-bottom: 16px;">
         <b-col sm="12" md="8" lg="6">
-          <b-form-input v-model="arg" :type="'text'" placeholder="Word"></b-form-input>
+          <b-form-input
+            v-model="arg"
+            :type="'text'"
+            placeholder="Word"
+            v-on:keyup.enter="getContent"
+          ></b-form-input>
         </b-col>
       </b-row>
       <b-row class="justify-content-center">
@@ -44,6 +49,9 @@ export default {
         .then(response => {
           this.res = response.data;
           console.log(response);
+          if (response.data.length < 1) {
+            this.res = ['no result'];
+          }
         })
         .catch(response => console.log(response));
     }
